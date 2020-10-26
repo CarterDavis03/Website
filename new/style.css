@@ -1,0 +1,69 @@
+* {
+    font-family: "Bahnschrift";
+}
+
+.bg-sandersblue {
+    background-color: #009dff;
+}
+
+.padding {
+    padding-bottom: 2rem;
+}
+
+nav .navbar-nav li a {
+    font-size: 25px;
+    font-family: "Bahnschrift";
+}
+
+/*Fix image carousel on firefox */
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+  }
+
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+
+  .welcome {
+      padding-top: 2rem;
+  }
+
+  #before-list {
+      margin-bottom: 0;
+  }
+
+  .bold-list-items {
+      font-weight: bold;
+  }
+
+  .no-margin{
+      margin-bottom: 0;
+      padding-bottom: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
