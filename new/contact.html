@@ -31,7 +31,7 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
             </li>
 
@@ -51,7 +51,7 @@
                 <a class="nav-link" href="prices.html">Prices</a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="contact.html">Contact</a>
             </li>
 
@@ -84,53 +84,56 @@
 </div>
 </div>
 
-<!-- Welcome heading -->
+<!-- Heading -->
 <div class="container-fluid padding">
 <div class="row pageheading text-center">
     <div class="col-12">
-        <h1 class="display-4">Welcome to Sander's!</h1>
+        <h1 class="display-4">Contact Us</h1>
     </div>
 </div>
 </div>
 
-<!-- Content row -->
 <div class="container-fluid padding">
-<div class="row text-center padding">
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 padding">
-        <h3>Opening Hours</h3>
-        <p>10am to 10pm, 1st March to 30th November</p>
-        <h3>Contact Details</h3>
-        <p>Telephone: 07850 846 654</p>
-        <p>Email: info@sanders.co.uk</p>
-        <a href="prices.html"><button type="button" class="btn btn-primary btn-lg">Click here for prices!</button></a>
-    </div>
+<div class="row">
+<form action="" class="col-xs-12 col-sm-6 col-md-6 padding">
 
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 padding">
-        <h3>Welcome</h3>
-        <p>Welcome to Sander's, the theme park designed with the whole family in mind</p>
-        <h3>Facilities</h3>
-        <p id="before-list">Here at Sander's, we have a wide range of facilites, including:</p>
-        <ul class="list-unstyled bold-list-items">
-            <li>Toilets</li>
-            <li>Picnic Areas</li>
-            <li>Many restaurants onsite</li>
-            <li>Snack bars</li>
-            <li>Free barbaque facilites</li>
-        </ul>
-        
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label for="firstname">Firstname</label>
+                <input type="text" name="firstname" id="firstname" class="form-control">
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="form-group">
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname" class="form-control">
+            </div>
+        </div>
 
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 padding">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.9686264063407!2d-2.071538384005998!3d52.33471525769607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870eca80dd54353%3A0x7961fe84855513f2!2sSanders%20Park!5e0!3m2!1sen!2suk!4v1603443055618!5m2!1sen!2suk" width="350" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <h3 style="padding-bottom: 0;">Address</h3>
-        <p>Sander's Theme Park <br>
-        Kidderminster Road <br>
-        Bromsgrove <br>
-        Worcestershire <br>
-        B61 7JP </p>
-
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" class="form-control">
     </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea  name="message" id="message" class="form-control" rows="3"></textarea>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg">Submit</button>
+
+
+</form>
+<div class="col-xs-12 col-sm-6 col-md-6 text-center">
+    <h3>Contact Us Directly!</h3>
+    <p>Telephone: 07850 846 654</p>
+    <p>Email: info@sanders.co.uk</p>
+</div>
+
 </div>
 </div>
 
