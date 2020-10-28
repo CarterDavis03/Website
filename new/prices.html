@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Contact Sander's</title>
+    <title>Prices at Sander's</title>
     <link rel="icon" type="image/png" href="images/favicon.svg">
 
     <!-- Minimum required libraries -->
@@ -13,6 +13,58 @@
 	<script src="bootstrap/2popper.min.js"></script>
     <script src="bootstrap/3bootstrap.min.js"></script>
     
+    <script>
+        var adultno = 0;
+        var childno = 0;
+        var total = 0;
+        var totstring = "";
+        var time = 200;
+
+        function calcPrice(){
+            adultno = Number(document.getElementById("adults").value);
+            childno = Number(document.getElementById("children").value);
+            total = 0;
+
+            //console.log("1");
+
+            if ( adultno == 2 && childno == 2 ) { 
+                total = 30; 
+                //console.log("2");
+            }
+            else if ( adultno == 2 && childno > 2 && childno <= 4 ) { 
+                total = 40; 
+                //console.log("3");
+            }
+            else {
+                adultno = adultno * 18;
+                childno = childno * 9;
+                //console.log("4");
+
+                total = adultno + childno;
+
+                //console.log("5");
+
+                
+            }
+
+            totstring = total.toString();
+
+            document.getElementById("totalprice").innerHTML = "&#163;" + totstring;
+
+            //setTimeout("calcPrice", time);
+
+            //console.log("6");
+
+
+        }
+
+        //console.log("7");
+
+        window.onload = calcPrice;
+
+        setInterval(calcPrice, time);
+    </script>
+
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -47,11 +99,11 @@
                 <a class="nav-link" href="food.html">Food</a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="prices.html">Prices</a>
             </li>
 
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
             </li>
 
@@ -85,63 +137,53 @@
 </div>
 
 <!-- Heading -->
+
 <div class="container-fluid padding">
-<div class="row pageheading text-center">
+<div class="row text-center pageheading padding">
     <div class="col-12">
-        <h1 class="display-4">Contact Us</h1>
+        <h1 class="display-4">Prices</h1>
     </div>
 </div>
 </div>
 
-<!-- Contact Form -->
 <div class="container-fluid padding">
-<div class="row">
-<form action="" class="col-xs-12 col-sm-12 col-md-6 padding">
+<div class="row text-center padding">
+    <!-- Prices chart -->
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+        <h3>Prices</h3>
+        <p>Adult: &#163;18<br>
+        Child: &#163;9<br>
+        Family (2 Adults + 2 Children): &#163;30<br>
+        Large Family (2 Adults + Up To 4 Children): &#163;40</p>
+    </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <label for="firstname">Firstname</label>
-                <input type="text" name="firstname" id="firstname" class="form-control">
+    <!-- Price Calculator-->
+    <form class="col-sm-12 col-md-6 col-lg-8">
+
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="adults">Number of Adults:</label>
+                    <input type="number" name="adults" id="adults" class="form-control" value="0" min="0">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="form-group">
+                    <label for="children">Number of Children:</label>
+                    <input type="number" name="children" id="children" class="form-control" value="0" min="0">
+                </div>
             </div>
         </div>
-
+        
+        <div class="row text-center">
         <div class="col">
-            <div class="form-group">
-                <label for="surname">Surname</label>
-                <input type="text" name="surname" id="surname" class="form-control">
-            </div>
+            <p style="line-height: 0;">Total Price:</p>
+            <h1 id="totalprice">&#163;10</h1>
+        </div>
         </div>
 
-    </div>
-
-    <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" name="email" id="email" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="number">Phone Number</label>
-        <input type="text" name="number" id="number" class="form-control">
-    </div>
-
-    <div class="form-group">
-        <label for="message">Message</label>
-        <textarea  name="message" id="message" class="form-control" rows="3"></textarea>
-    </div>
-
-    <button type="button" class="btn btn-primary btn-lg">Submit</button>
-
-
-</form>
-
-<!-- Contact Details -->
-<div class="col-xs-12 col-sm-12 col-md-6 text-center">
-    <h3>Contact Us Directly!</h3>
-    <p>Telephone: 07850 846 654</p>
-    <p>Email: info@sanders.co.uk</p>
-</div>
-
+    </form>
 </div>
 </div>
 
