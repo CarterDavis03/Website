@@ -90,6 +90,9 @@ nav .navbar-nav li a {
     width: 100%;
 }
 
+#google-map {
+    max-width: 350px;
+}
 
 
 
