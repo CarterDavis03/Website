@@ -3,9 +3,9 @@ var images = [];
 var time = 3000;
 
 //Add all the images to a list
-images[0] = 'photos/1.png';
-images[1] = 'photos/2.png';
-images[2] = 'photos/3.png';
+images[0] = 'photos/1.jpg';
+images[1] = 'photos/2.jpg';
+images[2] = 'photos/3.jpg';
 
 function changeImg(){
 
