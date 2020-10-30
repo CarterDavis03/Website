@@ -94,6 +94,13 @@ nav .navbar-nav li a {
     max-width: 350px;
 }
 
+a {
+    color: black;
+}
+a:hover {
+    color: black;
+}
+
 
 
 
