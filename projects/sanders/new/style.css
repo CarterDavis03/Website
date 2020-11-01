@@ -1,5 +1,10 @@
+@font-face {
+	font-family: Bahn;
+	src: url(bahnschrift.ttf);
+}
+
 * {
-    font-family: "Bahnschrift";
+    font-family: Bahn;
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
     -moz-animation: fadeIn ease 1s;
