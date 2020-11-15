@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Vote System</title>
+		<link rel="stylesheet" href="style.css">
+		
+		<script>
+			var yesInt = 0;
+			var noInt = 0;
+
+			
+
+			function plusYes(){
+							yesInt = yesInt + 1;
+							document.getElementById("yesValue").innerHTML = yesInt;
+			}
+
+			function plusNo(){
+							noInt = noInt + 1;
+							document.getElementById("noValue").innerHTML = noInt;
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<a onclick="plusYes()"><div class="yesContainer standard">
+				<h1 class="answerText">Yes</h1>
+				<h1 id="yesValue" class="valueText">0</h1>
+			</div></a>
+
+			<a onclick="plusNo()"><div class="noContainer standard">
+				<h1 class="answerText">No</h1>
+				<h1 id="noValue" class="valueText">0</h1>
+			</div></a>
+		</div>
+	</body>
+
+</html>
