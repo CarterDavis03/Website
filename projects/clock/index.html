@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Clock</title>
+    <meta charset="utf-8">
+
+    <link href="style.css" rel="stylesheet">
+
+    <script>
+        function clockFunction() {
+            var time = new Date();
+            var hours = time.getHours();
+            var minutes = time.getMinutes();
+            var seconds = time.getSeconds();
+
+            hours = addZero(hours);
+            minutes = addZero(minutes);
+            seconds = addZero(seconds);
+
+            document.getElementById('clockDisplay').innerHTML = hours+ ":" + minutes + ":" + seconds;
+            var r = setTimeout(clockFunction, 250);
+
+        function addZero(one) {
+            if (one < 10) {one = "0" + one }
+            return one;
+        }
+        }
+    </script>
+
+</head>
+
+<body onload="clockFunction()">
+    <div class="main">
+        <div class="clockSection">
+            <h1 id="clockDisplay"></h1>
+        </div>
+    </div>
+</body>
+
+</html>
